@@ -4,7 +4,9 @@ import axios from 'axios';
 export const getPosts = () => {
   return (dispatch) => {
     axios.get('/api/posts')
-      .then( res => dispatch({ type: 'POSTS', posts: res.data }) )
+      .then( res => {
+        dispatch({ type: 'POSTS', posts: res.data }) 
+      })
   }
 }
 

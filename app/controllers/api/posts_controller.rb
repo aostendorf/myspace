@@ -2,7 +2,8 @@ class Api::PostsController < ApplicationController
 before_action :set_post, only: [:show, :update, :edit, :destroy]
 
   def index
-  render json: User
+    render json: Post.all
+  end
 
   def show
     render json: @post
@@ -23,6 +24,7 @@ before_action :set_post, only: [:show, :update, :edit, :destroy]
       render json: @post
     else
       render json: @post.errors, status: 422
+    end
   end
 
   def destroy
