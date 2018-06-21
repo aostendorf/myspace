@@ -10,8 +10,7 @@ import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import Posts from './Posts';
-import PostForm from './PostForm';
-import Post from './Post';
+import PostView from './Post';
 
 class App extends Component {
   render() {
@@ -21,9 +20,9 @@ class App extends Component {
         <Flash />
         <FetchUser>
           <Switch>
-            <ProtectedRoute exact path='/' component={Home} />
-            <Route exact path="/posts" component={Posts} />
-            <Route excat path="/post" component={Post}/>
+            <Route exact path='/' component={Home} />
+            <ProtectedRoute exact path="/posts" component={Posts} />
+            <Route exact path="/postview/:id" component={PostView} />
             <AuthRoute exact path='/login' component={Login} />
             <AuthRoute exact path='/register' component={Register} />
             <Route component={NoMatch} />

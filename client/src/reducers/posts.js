@@ -10,7 +10,7 @@ const posts = ( state = [], action ) => {
           return action.app
         return a  
       })
-    case 'DELETE_APP':
+    case 'DELETE_POST':
       return state.filter( a => a.id !== action.id ) 
     default:
     return state;     

@@ -5,7 +5,7 @@ import { ADD_POST } from '../reducers/posts'
 import { INC_ID } from '../reducers/posts'
 
 class PostForm extends React.Component {
-  state = { name: '' }
+  state = { body: '' }
 
   handleSubmit = (e) => {
     e.preventDefault()
